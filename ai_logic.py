@@ -22,7 +22,7 @@ Job Description:
 Resume:
 {resume_text}
 
-Respond with a clear summary of how well this candidate fits the role and list key points for the decision.
+Respond with a clear summary of how well this candidate fits the role and list key points for the decision. Please include the name of the candidate at the beginning before your summary.
 """
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
