@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Screener</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+        background-color: #f5f6f8;
+        font-family: 'Segoe UI', sans-serif;
+        }
+        .card {
+        border-radius: 16px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+    </style>
+    </head>
+    <body>
+    <div class="container mt-5">
+        <div class="card p-4 mx-auto" style="max-width: 700px;">
+        <h3 class="mb-4 text-center text-primary">AI Resume Screener</h3>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+            <label for="resumeFile" class="form-label">Upload Resumes (PDF or DOCX)</label>
+            <input class="form-control" type="file" name="resumeFiles" multiple required>
+            </div>
+            <div class="mb-3">
+            <label for="job" class="form-label">Job Description</label>
+            <textarea class="form-control" name="job" rows="6" required></textarea>
+            </div>
+            <div class="text-end">
+            <button type="submit" class="btn btn-primary">Submit for Review</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    </body>
+    </html>
