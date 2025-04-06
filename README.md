@@ -42,7 +42,9 @@ python app.py
 
 Then go to [http://localhost:5000](http://localhost:5000) in your browser.
 
-## Notes
-- Uploaded files are saved to the `uploads/` folder.
-- Resume match results are stored in `reviews.db`.
-- The `.env` file is ignored via `.gitignore` — do not commit your API key.
+## Screenshots
+### 1. Resume Upload & Job Description Page
+![Page for entering job description and resumes for processing](assets/ai-resume-filter-1.png)
+
+### 2. Screening Results with Summary from AI
+![Page showing screening score and summary output from AI](assets/ai-resume-filter-2.png)
