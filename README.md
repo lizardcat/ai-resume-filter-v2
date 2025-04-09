@@ -27,7 +27,6 @@ python -m venv .venv
 source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 ```
 
-
 ### 3. Install dependencies
 Install all required dependencies using pip:
 
@@ -35,7 +34,7 @@ Install all required dependencies using pip:
 pip install -r requirements.txt
 ```
 
-### 4. In the project root, create a file called `.env` and add your OpenAI API key:
+### 4. In the project root, create a file called `.env` and add your OpenAI API key ([GET ONE HERE](https://platform.openai.com)):
 
 ```
 OPENAI_API_KEY=your-openai-key-here
