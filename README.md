@@ -14,27 +14,37 @@ This is an AI-powered resume screening system built using Python, Flask, and SQL
 ## Requirements
 - Python 3.9+
 
-### Python Dependencies
+## Setup
+### 1. Clone the repo
+```bash
+git clone https://github.com/lizardcat/ai-resume-filter-v2.git
+cd ai-resume-filter-v2
+```
+
+### 2. Create a virtual environment in the project root (Optional but recommended)
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+```
+
+
+### 3. Install dependencies
 Install all required dependencies using pip:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Or manually:
-```bash
-pip install flask flask_sqlalchemy sentence-transformers openai python-docx pymupdf python-dotenv
-```
-
-## Setup
-1. Clone the repo
-2. In the project root, create a file called `.env` and add your OpenAI API key:
+### 4. In the project root, create a file called `.env` and add your OpenAI API key:
 
 ```
 OPENAI_API_KEY=your-openai-key-here
 ```
+Replace `your-openai-key-here` with your actual OpenAI API key (e.g., sk-...).
 
-3. Run the app:
+    Note: The .env file is used to store sensitive credentials and should not be committed to version control. It is typically included in .gitignore to keep your API keys private.
+
+### 4. Run the app:
 
 ```bash
 python app.py
