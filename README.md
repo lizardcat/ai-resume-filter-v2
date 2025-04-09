@@ -21,7 +21,7 @@ This application integrates the OpenAI API to perform natural language reasoning
 
 The app uses **cosine similarity** to compute how closely a resume matches a given job description. This approach enables semantic matching rather than simple keyword overlap, allowing for a more accurate and meaningful comparison.
 
-Cosine similarity is a metric used to measure the similarity between two non-zero vectors in a multi-dimensional space. In the context of Natural Language Processing (NLP), we convert text data (e.g., resumes and job descriptions) into vector embeddings using a pre-trained language model like 'SentenceTransformers'. Once both texts are represented as vectors, cosine similarity quantifies the angle between them:
+Cosine similarity is a metric used to measure the similarity between two non-zero vectors in a multi-dimensional space. In the context of Natural Language Processing (NLP), we convert text data (e.g., resumes and job descriptions) into vector embeddings using a pre-trained language model like `SentenceTransformers` (the logic for this is in `ai_logic.py`). Once both texts are represented as vectors, cosine similarity quantifies the angle between them:
 
 **cosine_similarity(A, B) = (A · B) / (||A|| × ||B||)**
 
