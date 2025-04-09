@@ -11,8 +11,30 @@ This is an AI-powered resume screening system built using Python, Flask, and SQL
 - Filter results by match score threshold
 - Simple Bootstrap-based responsive UI
 
-## Requirements
-- Python 3.9+
+## How It Works
+
+### 1. Using OpenAI API for Resume Evaluation
+
+This application integrates the OpenAI API to perform natural language reasoning on resumes. Specifically, it sends both the resume text and the job description to a prompt defined in `ai_logic.py`. This prompt instructs the language model (gpt-3.5-turbo) to summarize the resume and provide a clear explanation of whether the candidate is a good fit for the role.
+
+### 2. Match Scoring with Cosine Similarity 
+
+The app uses **cosine similarity** to compute how closely a resume matches a given job description. This approach enables semantic matching rather than simple keyword overlap, allowing for a more accurate and meaningful comparison.
+
+Cosine similarity is a metric used to measure the similarity between two non-zero vectors in a multi-dimensional space. In the context of Natural Language Processing (NLP), we convert text data (e.g., resumes and job descriptions) into vector embeddings using a pre-trained language model like 'SentenceTransformers'. Once both texts are represented as vectors, cosine similarity quantifies the angle between them:
+
+**cosine_similarity(A, B) = (A · B) / (||A|| × ||B||)**
+
+
+Where:
+- \( A \) and \( B \) are embedding vectors
+- (A · B) is the dot product
+- ||A|| and ||B|| are magnitudes (Euclidean norms)
+
+The result is a score between **-1 and 1**:
+- **1**: Perfectly similar
+- **0**: No similarity
+- **-1**: Perfectly opposite (rare in practice for this use case)
 
 ## Setup
 ### 1. Clone the repo
@@ -55,5 +77,5 @@ Then go to [http://localhost:5000](http://localhost:5000) in your browser.
 ### 1. Resume Upload & Job Description Page
 ![Page for entering job description and resumes for processing](assets/ai-resume-filter-1.png)
 
-### 2. Screening Results with Summary from AI
+### 2. Screening Results with Summary from AI and Score Based on Cosine Similarity
 ![Page showing screening score and summary output from AI](assets/ai-resume-filter-2.png)
